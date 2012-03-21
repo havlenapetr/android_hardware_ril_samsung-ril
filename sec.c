@@ -40,8 +40,11 @@ SIM_Status ipc2ril_sim_status(struct ipc_sec_pin_status_response *pin_status)
 					return SIM_PUK;
 				case IPC_SEC_PIN_SIM_LOCK_SC_CARD_BLOCKED:
 					return SIM_BLOCKED;
+				case IPC_SEC_PIN_SIM_LOCK_SC_CARD_UNBLOCKED:
+					return SIM_NOT_READY;
 				default:
-					LOGE("%s: unknown SC substate %d --> setting SIM_ABSENT", __FUNCTION__, pin_status->key);
+					LOGE("%s: unknown SC substate %d --> setting SIM_ABSENT",
+							__FUNCTION__, pin_status->key);
 					return SIM_ABSENT;
 			}
 			break;

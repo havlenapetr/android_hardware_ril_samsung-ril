@@ -49,6 +49,7 @@ struct ipc_message_info;
 #define IPC_SEC_PIN_SIM_PB_INIT_COMPLETE        0x83
 
 /* Key types for the SIM card (SC) facility */
+#define IPC_SEC_PIN_SIM_LOCK_SC_CARD_UNBLOCKED  0x00 // ???
 #define IPC_SEC_PIN_SIM_LOCK_SC_PIN1_REQ        0x01
 #define IPC_SEC_PIN_SIM_LOCK_SC_PUK_REQ         0x02
 #define IPC_SEC_PIN_SIM_LOCK_SC_CARD_BLOCKED    0x05
